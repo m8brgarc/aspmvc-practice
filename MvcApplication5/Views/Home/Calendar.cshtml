@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Calendar";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+<table id="calendar">
+    <tr>
+        <th colspan="7" style="text-align:center;font-size:1.4em;font-weight:bold;padding:20px;">@ViewData["monthInWords"], @ViewData["year"]</th>
+    </tr>
+    <tr>
+@{
+    int day = (int)ViewData["firstDayOfMonth"];
+    int num = 1;
+    for(int i = 1; i <= ((int)ViewData["daysInCalMonth"]); i+=1)
+    {
+        if(day < i && num <= ((int)ViewData["daysInMonth"]))
+        {
+            @:<td><span>@num</span></td>
+            day += 1;
+            num += 1;
+        }
+        else
+        {
+            @:<td>&nbsp;</td>
+        }
+        if(i%7==0)
+        {
+            @:</tr><tr>
+        }
+    }
+}
+    </tr>
+</table>
+@{
+    int month = (int)ViewData["month"];
+    int year = (int)ViewData["year"];
+}
+<a id="prevCal" href="/Home/Calendar/@(month - 1)/@(year)#calendar">&lt;&lt;&lt;&nbsp;Prev</a>
+<a id="nextCal" href="/Home/Calendar/@(month + 1)/@(year)#calendar">Next&nbsp;&gt;&gt;&gt;</a>

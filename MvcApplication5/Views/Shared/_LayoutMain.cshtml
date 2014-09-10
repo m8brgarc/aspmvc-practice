@@ -1,0 +1,90 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/content/styles.css" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/content/print.css" media="print" />
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body>
+    <div id="wrapper">
+        <!-- #wrapper -->
+        <header>
+            <!-- header -->
+            <h1><a href="#">Carry The Load</a></h1>
+            <h2>Your compelling tag line goes here</h2>
+            <img src="~/images/headerimg.jpg" width="1080" height="200" alt=""><!-- header image -->
+        </header><!-- end of header -->
+
+        <nav>
+            <!-- top nav -->
+            <div class="menu">
+                <ul>
+                    <li><a href="/Home/Index">Home</a></li>
+                    <li><a href="/Home/About">About Us</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="/Home/Calendar">Calendar</a></li>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Preferences</a></li>
+                    <li><a href="/Home/Contact">Contact Us</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>
+        </nav><!-- end of top nav -->
+
+        <section id="main">
+            <!-- #main content and sidebar area -->
+            <section id="content">
+                <!-- #content -->
+
+                @RenderBody()
+
+            </section><!-- end of #content -->
+            <aside id="sidebar">
+                <!-- sidebar -->
+                <h3>Things To Do</h3>
+                <ul>
+                    <li><a href="#">Play Games</a></li>
+                    <li><a href="#">Chat With Friends</a></li>
+                    <li><a href="#">Swap Stories</a></li>
+                    <li><a href="#">Sell Stuff</a></li>
+                    <li><a href="#">Buy Stuff</a></li>
+                    <li><a href="#">Trade Stuff</a></li>
+                </ul>
+
+                <h3>Sponsors</h3>
+                <img src="~/images/ad180.png" alt="" /><br /><br />
+                <h3>Connect With Us</h3>
+                <ul>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Flickr</a></li>
+                </ul>
+
+                <h3>Did You Know?</h3>
+                <ul>
+                    <li><a href="#">Curabitur sodales</a></li>
+                    <li><a href="#">Sed dignissim</a></li>
+                    <li><a href="#">Fusce nec</a></li>
+                    <li><a href="#">Nulla quis</a></li>
+                    <li><a href="#">Curabitur sodales</a></li>
+                    <li><a href="#">Sed dignissim</a></li>
+                    <li><a href="#">Fusce nec</a></li>
+                    <li><a href="#">Nulla quis</a></li>
+                </ul>
+            </aside><!-- end of sidebar -->
+        </section><!-- end of #main content and sidebar-->
+
+        <footer>
+            <br />
+            <p>&copy; <a href="#">yoursite.com</a></p>
+            <br />
+        </footer>
+
+    </div><!-- #wrapper -->
+    <!-- Free template created by http://freehtml5templates.com -->
+</body>
+</html>
